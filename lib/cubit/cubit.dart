@@ -23,6 +23,7 @@ class AppCubit extends Cubit<AppStates> {
     return MRZScanner(
       controller: control,
       onSuccess: (mrzResult) async {
+        // Assign Result Of Scanner into Variable To Control The Data
         name = mrzResult.givenNames;
         gender = mrzResult.sex.name;
         countryCode = mrzResult.countryCode;
